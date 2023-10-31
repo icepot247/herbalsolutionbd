@@ -1,0 +1,12 @@
+$ npm -v
+8.5.5
+
+$ node -v
+v16.15.0
+
+
+
+cd /var/www/html/brta_avis_web_new_with_java/
+sudo kill $(sudo lsof -t -i:port_number) //For linux user
+
+php -S 192.168.78.10:5124 -t /public &

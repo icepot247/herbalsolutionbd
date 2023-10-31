@@ -1,0 +1,22 @@
+https://vuejs.org/guide/introduction.html
+
+https://vuejs.org/tutorial/#step-1
+https://www.vuemastery.com/pdf/Vue-Essentials-Cheat-Sheet.pdf
+https://devhints.io/vue
+
+https://vuelidate.js.org/
+
+https://bootstrap-vue.org/
+https://bootstrap-vue.org/docs/components/table
+
+*****************************Lock PHP********************
+Zend Gaurd
+IonCube Encoder
+Source Guardian
+phpShield
+phpBolt (free)
+
+https://laracasts.com/discuss/channels/laravel/how-to-encrypt-my-laravel-project
+https://github.com/SiavashBamshadnia/Laravel-Source-Encrypter
+
+https://github.com/mrgswift/laravel-encryptenv

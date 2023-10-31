@@ -1,0 +1,71 @@
+<template>
+    <div>
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <Breadcrumb title="Blank"/>
+
+                    <!-- Start content -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <button class="btn btn-primary float-end" data-target="_black"
+                                                    type="button" @click="generate()">Report
+                                            </button>
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end content -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    import DefaultLayout from "../layouts/DefaultLayout";
+    import Breadcrumb from "../components/common/Breadcrumb";
+
+    export default {
+        name: 'BlankPage',
+        components: {Breadcrumb},
+        data() {
+            return {
+                pageTitle: 'Blank'
+            }
+        },
+        created() {
+            this.$emit(`update:layout`, DefaultLayout);
+        },
+        mounted() {
+        },
+        methods: {
+            generate() {
+                this.axios.get(process.env.MIX_BASE_URL + '/report-generate',{responseType: 'blob'})
+                    .then((response) => {
+                        window.open(window.URL.createObjectURL(new Blob([response.data], {type: 'application/pdf'})));
+                    }).catch(error => {
+                    this.$toastr.error('Something went wrong. Please try again later!');
+                });
+            },
+
+        },
+        computed: {}
+    }
+</script>
+
+<style lang="scss">
+
+</style>
+

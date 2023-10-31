@@ -1,0 +1,2 @@
+hello
+@json($data)
